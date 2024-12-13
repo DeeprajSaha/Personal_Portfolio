@@ -71,7 +71,7 @@ nav{
 }
 
 @media (max-width: 768px){
-    .nav-lists{
+    /* .nav-lists{
         display: none;
         position: absolute;
         top: 100%;
@@ -87,10 +87,36 @@ nav{
         display: flex;
     }
 
+    */
+    /* To make the hamburger menu toggle smoothly */
+    .nav-lists {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        
+        /* Default state (hidden) */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: scaleY(0); /* Start in a collapsed state */
+        transform-origin: top;
+        transition: all 0.3s ease-in-out; /* Smooth transition */
+    }
+    
+    .nav-lists.active {
+        max-height: 500px; /* Adjust based on your content */
+        opacity: 1;
+        transform: scaleY(1); /* Expand smoothly */
+    }
     .hamburger{
         display: block;
-    }
-
+    } 
+    
 }
 
 /* hero */
@@ -102,7 +128,7 @@ nav{
     padding: 0 5%;
     position: relative;
 }
-.hero{
+.hero-content{
     flex: 1;
     max-width: 600px;
     margin-right: 16rem;
@@ -158,8 +184,8 @@ nav{
     transform: translateY(-3px);
 }
 
-/* .hero-image{
-    position: relative;
+.hero-image{
+    display: flex;
     width: 491px;
     height: 545px;
     filter: drop-shadow(16px 32px 15px #00f2fe);
@@ -169,8 +195,10 @@ nav{
     position: relative;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-} */
+    /* margin-left: 34rem; */
+    object-fit:cover;
+    border-radius: 10rem
+}
 
 @media (max-width:768px){
     .hero{
@@ -193,13 +221,130 @@ nav{
 /* About section */
 
 #about{
+    width: 100%;
     padding: 80px 0;
     color: var(--text-light);
 }
 
 .about-row{
     display: flex;
-    justify-self: center;
+   justify-content: space-between;
     flex-wrap: wrap;
-    gap: 38rem;
+    margin-left: 2rem;
+
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 367px;
+    border-radius: 15px;
+    margin-left: 16px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.tap-titles{
+    display: flex;
+        margin: 20px 0 40px;
+}
+
+.tap-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tap-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tap-links.active-links::after{
+    width: 50%;
+}
+
+.tap-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tap-contents ul li span{
+    color: var(--primary-color);
+}
+
+.tap-contents{
+    display: none;
+}
+
+.tap-contents.active-tab{
+    display: block;
+}
+
+/* Project section */
+
+#projects{
+    padding: 50px 0;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+#projects .work-list .work:hover{
+    transform: translateY(-10px);
+}
+
+.work a{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-bg);
+    font-weight: bold;
+    padding: 0 4px;
+    width: 25%;
+    height: 22px;
+    background: var(--primary-color);
+    margin: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+
+
 }

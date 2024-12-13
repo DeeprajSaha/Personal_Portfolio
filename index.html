@@ -9,11 +9,16 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="style.css" />
-    
+
     <title>My_Portfolio</title>
   </head>
   <body>
@@ -29,50 +34,121 @@
       <div class="hamburger">
         <i class="fa-solid fa-bars"></i>
       </div>
-      
     </nav>
-      <!-- section -->
+    <!-- section -->
 
-      <section class="hero" id="home">
-        <div class="hero-content">
-          <h1>Hello, It's Me</h1>
-          <h2>Deepraj Saha</h2>
-          <p>And I'm A Web Devloper<span typed-text></span></p>
-          
-          <!--Social-links  -->
-          
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="https://github.com/DeeprajSaha" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/deepraj-saha-ab9341339/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Hello, It's Me</h1>
+        <h2>Deepraj Saha</h2>
+        <p>And I'm A Web Developer<span typed-text></span></p>
+
+        <!--Social-links  -->
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="https://github.com/DeeprajSaha" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/deepraj-saha-ab9341339/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <!-- CV -->
+
+        <a href="#" class="download-cv">Download CV</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="self.jpg" alt="Technical error" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-row">
+          <div class="about-col-1">
+            <img src="/IMG_20230704_171725_983.jpg" alt="error" />
           </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hi, I’m Deepraj Saha, a passionate web developer with a strong
+              interest in creating dynamic and user-friendly websites. Currently
+              pursuing my Bachelor’s in Computer Applications (BCA) at Inspiria
+              Knowledge Campus, Siliguri, I’m honing my skills in full-stack
+              development to bring creative ideas to life on the web. Driven by
+              a love for problem-solving and innovation, I aim to craft digital
+              solutions that make a meaningful impact. When I’m not coding, I
+              enjoy Exploring new technologies or playing video games. Feel free
+              to connect and explore my journey in web development!
+            </p>
 
-          <!-- CV -->
-
-          <a href="#" class="download-cv">Download CV</a>
-        </div>
-
-        <div class="hero-image">
-          <!-- <img src="selfeimg.jpeg" alt="Technical error"> -->
-        </div>
-
-      </section>
-
-<!-- About Section -->
-
-      <section class="about-section" id="about">
-        <div class="about-container">
-          <div class="about-row">
-            <div class="about-col-1">
-              <img src="/IMG_20230704_171725_983.jpg" alt="error">
+            <div class="tap-titles">
+              <p class="tap-links active-links" onclick="opentab('skills')">
+                Skills
+              </p>
+              <!-- <p class="tap-links">Experience</p> -->
+              <p class="tap-links" onclick="opentab('education')">Education</p>
             </div>
-            <div class="about-col-2">
-              <h1>About Me</h1>
+
+            <div class="tap-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Development</span><br />Web app Development</li>
+                <!-- <li><span>App Development</span><br />Building Android apps</li> -->
+              </ul>
+            </div>
+            <!-- <div class="tap-contents">
+              <ul>
+                <li><span>2024</span><br />Web app Development</li>
+                <li><span>App Development</span><br />Building Android apps</li>
+              </ul>
+            </div> -->
+            <div class="tap-contents" id="education">
+              <ul>
+                <li>
+                  <span>2023-2026</span><br />Bachelor of Computer Application
+                </li>
+                <li>
+                  <span>College</span><br />Student at Inspiria Knowledge Campus
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="carimg.png" alt="" />
+            <a href="https://github.com/DeeprajSaha/Web-Projects/tree/main/Car" target="_blank">Get the code</a>
+          </div>
+          <div class="work">
+            <img src="gymimg.png" alt="" />
+            <a href="https://github.com/DeeprajSaha/Web-Projects/tree/main/Gym" target="_blank">Get the code</a>
+          </div>
+          <div class="work">
+            <img src="loginimg.png" alt="" />
+            <a
+              href="https://github.com/DeeprajSaha/Web-Projects/tree/main/Login" target="_blank">Get the code</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
