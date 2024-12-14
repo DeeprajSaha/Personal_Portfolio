@@ -171,6 +171,7 @@ nav{
 .download-cv{
     display: inline-block;
     padding: 0.8rem 2rem;
+    width: 38vh;
     background-color: #00f2fe;
     color: var(--dark-bg);
     font-size: 1.9rem;
@@ -345,6 +346,75 @@ nav{
     margin: 8px;
     border-radius: 8px;
     text-decoration: none;
+}
 
+/* ......contact...... */
 
+#contactme{
+    margin: 2rem;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-size: 25px;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--text-light);
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover{
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    width: 44vh;
+    background-color: #00f2fe;
+    color: var(--dark-bg);
+    border: none;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-radius: 5.2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 6px;
 }
